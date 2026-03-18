@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test XMPP avec ejabberd</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@xmpp/client@0.13.6/dist/xmpp.min.js" crossorigin></script>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>🧪 Test de chat XMPP</h1>
+        
+        <div id="login-section" class="section">
+            <h2>Connexion</h2>
+            <input type="text" id="jid" placeholder="utilisateur@192.168.11.125" value="alice@192.168.11.125">
+            <input type="password" id="password" placeholder="Mot de passe" value="">
+            <button id="connect-btn">Se connecter</button>
+            <p id="connection-status" class="status">Déconnecté</p>
+        </div>
+
+        <div id="chat-section" class="section hidden">
+            <h2>Messages</h2>
+            <div id="messages" class="messages">
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="recipient" placeholder="Destinataire (ex: bob@192.168.11.125)" value="bob@192.168.11.125">
+                <input type="text" id="message-input" placeholder="Votre message...">
+                <button id="send-btn">Envoyer</button>
+            </div>
+            
+            <button id="disconnect-btn">Se déconnecter</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
